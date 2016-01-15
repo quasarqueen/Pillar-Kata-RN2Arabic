@@ -1,7 +1,7 @@
 //Roman Numerals Kata
 
 #include <iostream>
-
+#include <string>
 
 using namespace std;
 
@@ -43,10 +43,22 @@ return 0;
 
 void numConvert::RN2Arab()
 {
-
+    int arabic=0;
+    cout<< "enter in a Roman Numeral"<<endl;
+    string roman;
+    cin>>roman;
+    
+    cout<< "Arabic Number is: " <<arabic <<endl;
 }
+
 
 void numConvert::Arab2RN()
 {
+    cout<< "enter in an Arabic number between 1 and 1000"<<endl;
+    int number;
+    std::string roman;
+    cin>>number;
+    string numStr = to_string(number);
 
+    cout<< "Roman Numeral is: " <<roman <<endl;
 }

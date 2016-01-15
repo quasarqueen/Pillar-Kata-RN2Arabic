@@ -5,6 +5,13 @@
 
 using namespace std;
 
+class numConvert
+{
+public:
+    void RN2Arab();
+    void Arab2RN();
+};
+
 // Main function
 int main()
 {
@@ -15,11 +22,31 @@ int main()
         int userchoice;
         cin >> userchoice;
         cout<<endl;
-        //functions
-        
+        numConvert convert;
+        switch (userchoice)
+        {
+            case 1:
+                convert.RN2Arab();
+                break;
+            case 2:
+                convert.Arab2RN();
+                break;
+            default:
+                cout<<"please make a vaild choice.";
+        }
         cout<<"\nwould you like to use convert another number? 1 for yes, 2 for no"<<endl;
         cin>>go;
         cout<<endl;
     }while (go < 2);
 return 0;
+}
+
+void numConvert::RN2Arab()
+{
+
+}
+
+void numConvert::Arab2RN()
+{
+
 }

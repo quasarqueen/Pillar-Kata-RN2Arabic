@@ -47,8 +47,30 @@ void numConvert::RN2Arab()
     cout<< "enter in a Roman Numeral"<<endl;
     string roman;
     cin>>roman;
+    const int length = roman.length();
+    int i;
+    int l=(length);
+    for (i=0; i<l; i++)
+    {
+        int j=(i-1);
+        int k=(i+1);
+        if(roman[i] == 'M' && roman[j] != 'C')  {arabic=(arabic+1000);}
+        if(roman[i] == 'M' && roman[j] == 'C')  {arabic=(arabic+900);}
+        if(roman[i] == 'D' && roman[j] != 'C')  {arabic=(arabic+500);}
+        if(roman[i] == 'D' && roman[j] == 'C')  {arabic=(arabic+400);}
+        if(roman[i] == 'C' && roman[j] != 'X'&& roman[k] != 'M' && roman[k] != 'D')  {arabic=(arabic+100);}
+        if(roman[i] == 'C' && roman[j] == 'X')  {arabic=(arabic+90);}
+        if(roman[i] == 'L' && roman[j] != 'X')  {arabic=(arabic+50);}
+        if(roman[i] == 'L' && roman[j] == 'X')  {arabic=(arabic+40);}
+        if(roman[i] == 'X' && roman[j] != 'I'&& roman[k] != 'L' && roman[k] != 'C')  {arabic=(arabic+10);}
+        if(roman[i] == 'X' && roman[j] == 'I')  {arabic=(arabic+9);}
+        if(roman[i] == 'V' && roman[j] != 'I')  {arabic=(arabic+5);}
+        if(roman[i] == 'V' && roman[j] == 'I')  {arabic=(arabic+4);}
+        if(roman[i] == 'I' && roman[k] != 'X' && roman[k] != 'V')  {arabic=(arabic+1);}
+    }
     
-    cout<< "Arabic Number is: " <<arabic <<endl;
+    cout<<"Roman:"<<roman <<endl;
+    cout<< "Arabic is: " <<arabic <<endl;
 }
 
 
